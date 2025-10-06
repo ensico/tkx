@@ -152,7 +152,7 @@ p2 = snd . divide
 
 --- Auxiliary
 
---pp = putStr
+pp = putStr
 
 -- esconder:
 
@@ -423,10 +423,10 @@ sequencia_elfos a b = elfos_codigo (codigo a) (codigo b)
 
 --- cartões perfurados
 
-pp = map ad ENSICO.>> concat ENSICO.>> putStr
-     where show' (Just a) = show a
-           show' (Nothing) = ""
-           ad (a,(b,c,d)) = show a ++ "\t|\t" ++ (show b) ++ "\t" ++ (show' c) ++ "\t" ++ (show' d) ++ "\n"
+ppc = map ad ENSICO.>> concat ENSICO.>> putStr
+      where show' (Just a) = show a
+            show' (Nothing) = ""
+            ad (a,(b,c,d)) = show a ++ "\t|\t" ++ (show b) ++ "\t" ++ (show' c) ++ "\t" ++ (show' d) ++ "\n"
 
 ibm029 = a029 ++ b029 ++ c029 ++ d029 ++ e029 ++ f029 ++ g029 ++ h029
          where a029 = (['&','-'] ++ ['0'..'9']) # (zip3 ([12,11]++[0..9]) (replicate 12 Nothing) (replicate 12 Nothing))
